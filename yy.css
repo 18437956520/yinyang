@@ -7,6 +7,10 @@
     border-bottom-width: 100px;
     position: relative;
     /* 相对定位 */
+    animation-name: spin;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
 
 .taiji::before {
@@ -35,4 +39,12 @@
     background-color: black;
     top: 50%;
     right: 0;
+}
+@keyframes spin{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
 }

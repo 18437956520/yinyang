@@ -1,0 +1,38 @@
+.taiji {
+    margin: 200px auto;
+    border: 1px solid black;
+    width: 200px;
+    height: 100px;
+    border-radius: 50%;
+    border-bottom-width: 100px;
+    position: relative;
+    /* 相对定位 */
+}
+
+.taiji::before {
+    content: '';
+    /* 必须存在 */
+    position: absolute;
+    /* 伪元素相对于父元素进行绝对定位 */
+    border: 35px solid black;
+    width: 30px;
+    height: 30px;
+    /* 小圆自身宽度加上两个边框厚度=大圆宽度的一半 */
+    border-radius: 50%;
+    background-color: white;
+    top: 50%;
+    left: 0;
+    /* 指的是小边框上线到大边框上线的距离 */
+}
+
+.taiji::after{
+    content: '';
+    position: absolute;
+    border: 35px solid white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: black;
+    top: 50%;
+    right: 0;
+}
